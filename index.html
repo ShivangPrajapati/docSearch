@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>docSearch - Explore the world</title>
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav class = "blue lighten-1">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">docSearch</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#upload" class = "waves-effect waves-light"><i class="material-icons left">publish</i>Upload File</a></li>
+        <li><a href="#delete" class = "waves-effect waves-light"><i class="material-icons left">delete</i>Delete File</a></li>
+      </ul>
+    </div>
+</nav>
+<div id="upload" class="modal">
+    <div class="modal-content">
+      <h5>Upload Your File</h5>
+      <form action="" method="post" enctype="multipart/form-data">
+	    <div class="file-field input-field">
+	      <div class="btn">
+	        <span>File</span>
+	        <input id = "uploadTarget" type="file">
+	      </div>
+	      <div class="file-path-wrapper">
+	        <input class="file-path validate" type="text" placeholder="Upload a file">
+	      </div>
+	    </div>
+  	</form>
+    </div>
+    <div class="modal-footer">
+    	<a href = "#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      	<a href = "#!" id="uploadFile" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+    </div>
+</div>
+
+
+<div id="delete" class="modal">
+    <div class="modal-content">
+      <h5>Delete File</h5>
+      <form action="" method="post">
+	    <div class="input-field">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="fileSuggest" class="autocomplete">
+          <label for="fileSuggest">Enter file name</label>
+        </div>
+  	</form>
+    </div>
+    <div class="modal-footer">
+    	<a href = "#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      	<!-- <a href = "#!" id="deleteFile" class=" modal-action modal-close waves-effect waves-green btn-flat">Delete</a> -->
+    </div>
+</div>
+
+<div class = "container">
+<div class = "card-panel tp">
+	<form>
+	<div class = "row">
+	<div class = "col s9 m7 input-field">
+		
+			<input placeholder="Type here" id="query" name = "q" type="text" class="validate">
+			<label for="query">Search</label>
+		
+	</div>
+	<div class = "col s3 m1">
+		<a class="btn-floating waves-effect waves-light blue lighten-1 shiftDown" id="search"><i class="material-icons">search</i></a>
+	</div>
+	<div class = "col s10 m4">
+		<div class="input-field">
+		    <select id="searchType">
+		      <option value="none" disabled selected>Choose document type</option>
+		      <option value="all">All</option>
+		      <option value="text">Text</option>
+		      <option value="image">Images</option>
+		      <option value="audio">Audio</option>
+		      <option value="video">Video</option>
+		      <option value="pdf">PDF</option>
+		      <option value="other">Other</option>
+		    </select>
+		    <label>Type</label>
+	  	</div>
+	</div>	
+	</div>	
+	</form>
+</div>	
+
+<div id = "searchResult">
+</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
